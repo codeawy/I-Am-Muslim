@@ -18,16 +18,40 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.table-container {
+  margin: 20px auto;
+  width: 80%;
+}
+
+.ramadan-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ramadan-table th,
+.ramadan-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.ramadan-table th {
+  background-color: #4a4a4a;
+}
+
+.ramadan-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.ramadan-table tbody tr:hover {
+  background-color: #624f4f;
 }
